@@ -31,11 +31,16 @@ const ContactsList = ({ contacts, onDelete }) => {
   );
 };
 
+ContactsList.defaultProps = {
+  onDelete: () => {},
+};
+
 ContactsList.propTypes = {
   contacts: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     number: PropTypes.number.isRequired,
+    onDelete: PropTypes.func,
   }),
 };
 

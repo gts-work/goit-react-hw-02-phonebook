@@ -19,10 +19,15 @@ const ContactItem = ({ id, name, number, onDelete }) => (
   </tr>
 );
 
+ContactItem.defaultProps = {
+  onDelete: () => {},
+};
+
 ContactItem.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
+  onDelete: PropTypes.func,
 };
 
 export default ContactItem;

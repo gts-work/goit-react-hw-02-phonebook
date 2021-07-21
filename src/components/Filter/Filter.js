@@ -17,10 +17,12 @@ const Fiter = ({ value, onChange }) => (
 
 Fiter.defaultProps = {
   value: "",
+  onChange: () => {},
 };
 
 Fiter.propTypes = {
   value: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default Fiter;
