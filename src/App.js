@@ -14,7 +14,7 @@ class App extends Component {
   };
 
   addContact = (id, name, number) => {
-    if (!this.isEqualName) {
+    if (!this.isEqualName(name)) {
       const contact = { id, name, number };
       this.setState(({ contacts }) => ({
         contacts: [contact, ...contacts],
@@ -25,8 +25,6 @@ class App extends Component {
   };
 
   onSubmit = (data) => {
-    console.log("App ~ data: ", data);
-
     const { id, name, number } = data;
 
     console.log("App ~ ID: ", id);
@@ -48,8 +46,22 @@ class App extends Component {
     );
   };
 
-  isEqualName = (contacts, name) =>
-    contacts.find((contact) => contact.name === name);
+  isEqualName = (name) => {
+    console.log("EQUAL: ", name);
+    this.state.contacts.find((contact) => contact.name === name);
+  };
+
+  handleDelete = (e) => {
+    const contactId = e.currentTarget.value;
+
+    console.log("DELETE: ", contactId);
+
+    this.setState((prevState) => ({
+      contacts: prevState.contacts.filter(
+        (contact) => contact.id !== contactId
+      ),
+    }));
+  };
 
   render() {
     const { filter } = this.state;
@@ -60,7 +72,7 @@ class App extends Component {
         <Title title="Phonebook" />
         <ContactForm onSubmit={this.onSubmit} />
         <Filter value={filter} onChange={this.changeFilter} />
-        <ContactsList contacts={visibleContact} />
+        <ContactsList contacts={visibleContact} onDelete={this.handleDelete} />
       </div>
     );
   }

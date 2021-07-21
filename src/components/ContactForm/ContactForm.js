@@ -40,6 +40,7 @@ class ContactForm extends Component {
         <label className={styles.form_label} htmlFor={nameInputId}>
           <span className={styles.label_name}>Name</span>
           <input
+            className={styles.form_input}
             type="text"
             name="name"
             value={this.state.name}
@@ -54,6 +55,7 @@ class ContactForm extends Component {
         <label className={styles.form_label} htmlFor={numberInputId}>
           <span className={styles.label_name}>Number</span>
           <input
+            className={styles.form_input}
             type="tel"
             name="number"
             value={this.state.number}

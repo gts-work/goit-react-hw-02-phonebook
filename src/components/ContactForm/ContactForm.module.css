@@ -12,6 +12,12 @@
   margin-bottom: 25px;
 }
 
+.form_input {
+  width: 85%;
+
+  /* margin-bottom: 25px; */
+}
+
 .label_name {
   display: inline-block;
 

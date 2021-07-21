@@ -29,13 +29,20 @@ td {
   /* color: rgb(63, 49, 49); */
 }
 
-/* td:first-child {
-    background: cadetblue;
-    color: rgb(63, 49, 49);
-    padding: 10px 20px;
+.delete_contact_btn {
+  background-color: cadetblue;
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 700px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-th:first-child,
-td:first-child {
-    text-align: left;
-} */
+.delete_contact_btn:hover {
+  background-color: brown;
+}

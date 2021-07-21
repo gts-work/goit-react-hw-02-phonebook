@@ -1,9 +1,8 @@
 import React from "react";
 
 import ContactItem from "./ContactItem";
-import styles from "./ContactsList.module.css";
 
-const ContactsList = ({ contacts }) => {
+const ContactsList = ({ contacts, onDelete }) => {
   console.log("ContactsList ~ contacts: ", contacts);
 
   return (
@@ -18,7 +17,12 @@ const ContactsList = ({ contacts }) => {
         </thead>
         <tbody>
           {contacts.map(({ id, name, number }) => (
-            <ContactItem key={id} name={name} number={number} />
+            <ContactItem
+              id={id}
+              name={name}
+              number={number}
+              onDelete={onDelete}
+            />
           ))}
         </tbody>
       </table>
