@@ -1,9 +1,16 @@
 import React from "react";
 
+import styles from "./Filter.module.css";
+
 const Fiter = ({ value, onChange }) => (
   <label>
-    Find contacts by name
-    <input type="text" value={value} onChange={onChange} />
+    <span className={styles.title_filter}>Find contacts by name</span>
+    <input
+      className={styles.input_filter}
+      type="text"
+      value={value}
+      onChange={onChange}
+    />
   </label>
 );
 

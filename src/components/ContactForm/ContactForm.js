@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import styles from "./ContactForm.module.css";
+
 const shortid = require("shortid");
 
 class ContactForm extends Component {
@@ -34,9 +36,9 @@ class ContactForm extends Component {
     const numberInputId = shortid.generate();
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor={nameInputId}>
-          Name
+      <form className={styles.form} onSubmit={this.handleSubmit}>
+        <label className={styles.form_label} htmlFor={nameInputId}>
+          <span className={styles.label_name}>Name</span>
           <input
             type="text"
             name="name"
@@ -49,8 +51,8 @@ class ContactForm extends Component {
           />
         </label>
 
-        <label htmlFor={numberInputId}>
-          Number
+        <label className={styles.form_label} htmlFor={numberInputId}>
+          <span className={styles.label_name}>Number</span>
           <input
             type="tel"
             name="number"
@@ -63,7 +65,9 @@ class ContactForm extends Component {
           />
         </label>
 
-        <button type="submit">Add contact</button>
+        <button className={styles.add_contact_btn} type="submit">
+          Add contact
+        </button>
       </form>
     );
   }

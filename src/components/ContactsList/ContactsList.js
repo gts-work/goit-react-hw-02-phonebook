@@ -1,13 +1,14 @@
 import React from "react";
 
 import ContactItem from "./ContactItem";
+import styles from "./ContactsList.module.css";
 
 const ContactsList = ({ contacts }) => {
   console.log("ContactsList ~ contacts: ", contacts);
 
   return (
     <div>
-      <p>Contacts</p>
+      <h3>Contacts</h3>
       <table>
         <thead>
           <tr>

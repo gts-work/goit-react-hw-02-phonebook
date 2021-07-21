@@ -49,7 +49,7 @@ class App extends Component {
     const visibleContact = this.getVisibleContacts();
 
     return (
-      <div>
+      <div className="container">
         <Title title="Phonebook" />
         <ContactForm onSubmit={this.onSubmit} />
         <Filter value={filter} onChange={this.changeFilter} />
