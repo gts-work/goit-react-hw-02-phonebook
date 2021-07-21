@@ -9,8 +9,8 @@ const ContactsList = ({ contacts }) => {
     <div>
       <p>Contacts</p>
 
-      {contacts.map(({ id, name }) => (
-        <ContactItem key={id} name={name} />
+      {contacts.map(({ id, name, number }) => (
+        <ContactItem key={id} name={name} number={number} />
       ))}
     </div>
   );

@@ -11,16 +11,16 @@ class App extends Component {
   onSubmit = (data) => {
     console.log("App ~ data: ", data);
 
-    const { id, name } = data;
+    const { id, name, number } = data;
 
     console.log("App ~ ID: ", id);
     console.log("App ~ name: ", name);
 
-    this.addContact(id, name);
+    this.addContact(id, name, number);
   };
 
-  addContact = (id, name) => {
-    const contact = { id, name };
+  addContact = (id, name, number) => {
+    const contact = { id, name, number };
     this.setState(({ contacts }) => ({
       contacts: [contact, ...contacts],
     }));
