@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 const shortid = require("shortid");
 
-class Form extends Component {
+class ContactForm extends Component {
   state = {
     id: "",
     name: "",
@@ -69,4 +69,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default ContactForm;

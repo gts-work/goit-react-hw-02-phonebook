@@ -8,10 +8,19 @@ const ContactsList = ({ contacts }) => {
   return (
     <div>
       <p>Contacts</p>
-
-      {contacts.map(({ id, name, number }) => (
-        <ContactItem key={id} name={name} number={number} />
-      ))}
+      <table>
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>Phone</td>
+          </tr>
+        </thead>
+        <tbody>
+          {contacts.map(({ id, name, number }) => (
+            <ContactItem key={id} name={name} number={number} />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

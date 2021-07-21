@@ -1,9 +1,10 @@
 import React from "react";
 
 const ContactItem = ({ id, name, number }) => (
-  <li key={id}>
-    {name} {number}
-  </li>
+  <tr key={id}>
+    <td>{name}</td>
+    <td>{number}</td>
+  </tr>
 );
 
 export default ContactItem;
