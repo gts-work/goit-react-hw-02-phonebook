@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import ContactItem from "./ContactItem";
 
@@ -28,6 +29,14 @@ const ContactsList = ({ contacts, onDelete }) => {
       </table>
     </div>
   );
+};
+
+ContactsList.propTypes = {
+  contacts: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    number: PropTypes.number.isRequired,
+  }),
 };
 
 export default ContactsList;

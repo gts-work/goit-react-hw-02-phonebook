@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import styles from "./Filter.module.css";
 
@@ -13,5 +14,13 @@ const Fiter = ({ value, onChange }) => (
     />
   </label>
 );
+
+Fiter.defaultProps = {
+  value: "",
+};
+
+Fiter.propTypes = {
+  value: PropTypes.string,
+};
 
 export default Fiter;

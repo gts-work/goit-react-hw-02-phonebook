@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import styles from "./ContactsList.module.css";
 
 const ContactItem = ({ id, name, number, onDelete }) => (
@@ -16,5 +18,11 @@ const ContactItem = ({ id, name, number, onDelete }) => (
     </td>
   </tr>
 );
+
+ContactItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.number.isRequired,
+};
 
 export default ContactItem;
