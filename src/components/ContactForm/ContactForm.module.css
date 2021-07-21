@@ -24,3 +24,28 @@
   margin-left: auto;
   margin-bottom: 25px;
 }
+
+.add_contact_btn {
+  display: block;
+
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-bottom: 25px;
+  /* margin: 10px; */
+
+  background-color: cadetblue;
+
+  border: none;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700px;
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.add_contact_btn:hover {
+  background-color: #008cba;
+}
