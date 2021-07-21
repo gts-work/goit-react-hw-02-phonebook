@@ -14,10 +14,14 @@ class App extends Component {
   };
 
   addContact = (id, name, number) => {
-    const contact = { id, name, number };
-    this.setState(({ contacts }) => ({
-      contacts: [contact, ...contacts],
-    }));
+    if (!this.isEqualName) {
+      const contact = { id, name, number };
+      this.setState(({ contacts }) => ({
+        contacts: [contact, ...contacts],
+      }));
+    } else {
+      alert(`${name} is already in contacts`);
+    }
   };
 
   onSubmit = (data) => {
@@ -43,6 +47,9 @@ class App extends Component {
       contact.name.toLowerCase().includes(normalizedFilter)
     );
   };
+
+  isEqualName = (contacts, name) =>
+    contacts.find((contact) => contact.name === name);
 
   render() {
     const { filter } = this.state;
