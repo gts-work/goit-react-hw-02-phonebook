@@ -48,7 +48,7 @@ class App extends Component {
 
   isEqualName = (name) => {
     console.log("EQUAL: ", name);
-    this.state.contacts.find((contact) => contact.name === name);
+    return this.state.contacts.find((contact) => contact.name === name);
   };
 
   handleDelete = (e) => {
